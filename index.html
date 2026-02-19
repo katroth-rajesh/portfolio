@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rajesh | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0f172a, #020617);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header span {
+      color: #38bdf8;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: #38bdf8;
+      color: #020617;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0284c7;
+      color: white;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 50px;
+      color: #38bdf8;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+
+    .skill-box {
+      background: #020617;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid #1e293b;
+      transition: 0.3s;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-8px);
+      border-color: #38bdf8;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project {
+      background: #020617;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid #1e293b;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-8px);
+      border-color: #38bdf8;
+    }
+
+    .contact-info {
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    .contact-info a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 25px;
+      border-top: 1px solid #1e293b;
+    }
+
+    @media(max-width: 768px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Hi, I'm <span>Rajesh</span></h1>
+    <p>Aspiring Software Developer | Salesforce | AI Enthusiast</p>
+    <a href="#contact" class="btn">Contact Me</a>
+  </header>
+  <section>
+    <h2 class="title">About Me</h2>
+
+    <div class="about">
+      <div>
+        <p>
+          I am a motivated engineering student with strong interest in software
+          development, artificial intelligence, and cloud platforms like Salesforce.
+          I enjoy building data-driven solutions and learning new technologies.
+        </p>
+        <br>
+        <p>
+          My goal is to start my career as a software developer and contribute
+          to innovative projects in a reputed organization.
+        </p>
+      </div>
+
+      <div>
+        <img src="C:\Users\rajes\OneDrive\Pictures\IMG_20230728_212832_056.jpg" alt="Profile Image">
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2 class="title">Skills</h2>
+
+    <div class="skills-grid">
+      <div class="skill-box">Java</div>
+      <div class="skill-box">Salesforce</div>
+      <div class="skill-box">Artificial Intelligence</div>
+      <div class="skill-box">HTML & CSS</div>
+      <div class="skill-box">Data Analytics</div>
+      <div class="skill-box">Problem Solving</div>
+    </div>
+  </section>
+  <section>
+    <h2 class="title">Certifications</h2>
+
+    <div class="skills-grid">
+      <a href="file:///C:/Users/rajes/certificates/23881A05U3-Rajesh-SalesForce.pdf" target="_blank" class="skill-box">Salesforce (2025)</a>
+      <a href="file:///C:/Users/rajes/certificates/23881A05U3-Rajesh-IBM%20AI%20fundamentals.pdf" target="_blank" class="skill-box">IBM AI Fundamentals (2025)</a>
+      <a href="file:///C:/Users/rajes/certificates/23881A05U3-Rajesh-java%20infosys.pdf" target="_blank" class="skill-box">Infosys Java (2025)</a>
+      <a href="file:///C:/Users/rajes/certificates/23881A05U3-Rajesh-Linguaskill%20Business.pdf" target="_blank" class="skill-box">Linguaskills Business (2025)</a>
+    </div>
+  </section>
+  <section>
+    <h2 class="title">Projects</h2>
+
+    <div class="projects-grid">
+      <div class="project">
+        <h3>Student Success Analytics</h3>
+        <br>
+        <p>
+          Built a predictive system to analyze student performance and
+          classify placement tiers using data-driven techniques.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Placement Tier Prediction</h3>
+        <br>
+        <p>
+          Developed ML-based model to predict student placement levels
+          and provide performance insights.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2 class="title">Contact Me</h2>
+
+    <div class="contact-info">
+      <p>Email: yourmail@gmail.com</p>
+      <p>Phone: +91-XXXXXXXXXX</p>
+      <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+      <p>GitHub: <a href="#">github.com/yourusername</a></p>
+    </div>
+  </section>
+  <footer>
+    <p>© 2026 Rajesh | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
