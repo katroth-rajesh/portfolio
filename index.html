@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rajesh | Portfolio</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -12,6 +14,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
     }
 
     body {
@@ -20,6 +23,43 @@
       line-height: 1.6;
     }
 
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(2,6,23,0.9);
+      backdrop-filter: blur(10px);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    nav h2 {
+      color: #38bdf8;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #e5e7eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
+
+    /* Hero */
     header {
       min-height: 100vh;
       display: flex;
@@ -27,7 +67,17 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      background: linear-gradient(135deg, #0f172a, #020617);
+      background: linear-gradient(135deg, #020617, #0f172a);
+      padding: 100px 20px;
+    }
+
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #38bdf8;
+      margin-bottom: 20px;
+      object-fit: cover;
     }
 
     header h1 {
@@ -46,33 +96,37 @@
 
     .btn {
       margin-top: 25px;
-      padding: 12px 30px;
+      padding: 12px 35px;
       background: #38bdf8;
       color: #020617;
       text-decoration: none;
       border-radius: 25px;
       font-weight: 600;
       transition: 0.3s;
+      display: inline-block;
     }
 
     .btn:hover {
       background: #0284c7;
       color: white;
+      transform: scale(1.05);
     }
 
+    /* Sections */
     section {
       max-width: 1100px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 90px 20px;
     }
 
     .title {
       text-align: center;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       margin-bottom: 50px;
       color: #38bdf8;
     }
 
+    /* About */
     .about {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -80,10 +134,14 @@
       align-items: center;
     }
 
-    .about img {
-      width: 100%;
+    .about-box {
+      background: #020617;
+      padding: 30px;
       border-radius: 20px;
+      border: 1px solid #1e293b;
     }
+
+    /* Skills */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -103,6 +161,8 @@
       transform: translateY(-8px);
       border-color: #38bdf8;
     }
+
+    /* Projects */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -122,9 +182,14 @@
       border-color: #38bdf8;
     }
 
+    /* Contact */
     .contact-info {
       text-align: center;
       font-size: 1.1rem;
+      background: #020617;
+      padding: 30px;
+      border-radius: 20px;
+      border: 1px solid #1e293b;
     }
 
     .contact-info a {
@@ -132,6 +197,7 @@
       text-decoration: none;
     }
 
+    /* Footer */
     footer {
       background: #020617;
       text-align: center;
@@ -139,9 +205,27 @@
       border-top: 1px solid #1e293b;
     }
 
+    /* Animations */
+    .hidden {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
     @media(max-width: 768px) {
       .about {
         grid-template-columns: 1fr;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
       }
 
       header h1 {
@@ -153,91 +237,139 @@
 
 <body>
 
-  <header>
-    <h1>Hi, I'm <span>Rajesh</span></h1>
-    <p>Aspiring Software Developer | Salesforce | AI Enthusiast</p>
-    <a href="#contact" class="btn">Contact Me</a>
-  </header>
-  <section>
-    <h2 class="title">About Me</h2>
+<!-- Navbar -->
+<nav>
+  <h2>Rajesh</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-    <div class="about">
-      <div>
-        <p>
-          I am a motivated engineering student with strong interest in software
-          development, artificial intelligence, and cloud platforms like Salesforce.
-          I enjoy building data-driven solutions and learning new technologies.
-        </p>
-        <br>
-        <p>
-          My goal is to start my career as a software developer and contribute
-          to innovative projects in a reputed organization.
-        </p>
-      </div>
+<!-- Hero -->
+<header id="home">
+  <img src="profile.jpg" alt="Profile">
+  <h1>Hi, I'm <span>Rajesh</span></h1>
+  <p>Aspiring Software Developer | Salesforce | AI Enthusiast</p>
+  <a href="#contact" class="btn">Hire Me</a>
+</header>
 
-      <div>
-        <img src="C:\Users\rajes\OneDrive\Pictures\IMG_20230728_212832_056.jpg" alt="Profile Image">
-      </div>
+<!-- About -->
+<section id="about" class="hidden">
+  <h2 class="title">About Me</h2>
+
+  <div class="about">
+    <div class="about-box">
+      <p>
+        I am a motivated engineering student with strong interest in software
+        development, artificial intelligence, and cloud platforms like Salesforce.
+        I enjoy building real-world applications and learning new technologies.
+      </p>
+      <br>
+      <p>
+        My goal is to become a skilled software developer and contribute
+        to innovative projects in a reputed organization.
+      </p>
     </div>
-  </section>
-  <section>
-    <h2 class="title">Skills</h2>
 
-    <div class="skills-grid">
-      <div class="skill-box">Java</div>
-      <div class="skill-box">Salesforce</div>
-      <div class="skill-box">Artificial Intelligence</div>
-      <div class="skill-box">HTML & CSS</div>
-      <div class="skill-box">Data Analytics</div>
-      <div class="skill-box">Problem Solving</div>
+    <div class="about-box">
+      <h3>Quick Info</h3>
+      <br>
+      <p>📍 India</p>
+      <p>🎓 Engineering Student</p>
+      <p>💼 Fresher / Entry Level</p>
+      <p>🚀 Open to Opportunities</p>
     </div>
-  </section>
-  <section>
-    <h2 class="title">Certifications</h2>
+  </div>
+</section>
 
-    <div class="skills-grid">
-      <a href="file:///C:/Users/rajes/certificates/23881A05U3-Rajesh-SalesForce.pdf" target="_blank" class="skill-box">Salesforce (2025)</a>
-      <a href="file:///C:/Users/rajes/certificates/23881A05U3-Rajesh-IBM%20AI%20fundamentals.pdf" target="_blank" class="skill-box">IBM AI Fundamentals (2025)</a>
-      <a href="file:///C:/Users/rajes/certificates/23881A05U3-Rajesh-java%20infosys.pdf" target="_blank" class="skill-box">Infosys Java (2025)</a>
-      <a href="file:///C:/Users/rajes/certificates/23881A05U3-Rajesh-Linguaskill%20Business.pdf" target="_blank" class="skill-box">Linguaskills Business (2025)</a>
+<!-- Skills -->
+<section id="skills" class="hidden">
+  <h2 class="title">Skills</h2>
+
+  <div class="skills-grid">
+    <div class="skill-box">Java</div>
+    <div class="skill-box">Salesforce</div>
+    <div class="skill-box">Python</div>
+    <div class="skill-box">Artificial Intelligence</div>
+    <div class="skill-box">HTML & CSS</div>
+    <div class="skill-box">JavaScript</div>
+    <div class="skill-box">Data Analytics</div>
+    <div class="skill-box">Problem Solving</div>
+  </div>
+</section>
+
+<!-- Certificates -->
+<section id="certificates" class="hidden">
+  <h2 class="title">Certifications</h2>
+
+  <div class="skills-grid">
+    <a href="certificates/salesforce.pdf" target="_blank" class="skill-box">Salesforce (2025)</a>
+    <a href="certificates/ibm-ai.pdf" target="_blank" class="skill-box">IBM AI Fundamentals</a>
+    <a href="certificates/infosys-java.pdf" target="_blank" class="skill-box">Infosys Java</a>
+    <a href="certificates/linguaskills.pdf" target="_blank" class="skill-box">Linguaskills Business</a>
+    <a href="certificates/computer-networks.pdf" target="_blank" class="skill-box">Computer Networks</a>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="hidden">
+  <h2 class="title">Projects</h2>
+
+  <div class="projects-grid">
+    <div class="project">
+      <h3>Student Success Analytics</h3>
+      <br>
+      <p>
+        Developed a predictive system to analyze student performance and
+        classify placement tiers using data-driven techniques.
+      </p>
     </div>
-  </section>
-  <section>
-    <h2 class="title">Projects</h2>
 
-    <div class="projects-grid">
-      <div class="project">
-        <h3>Student Success Analytics</h3>
-        <br>
-        <p>
-          Built a predictive system to analyze student performance and
-          classify placement tiers using data-driven techniques.
-        </p>
-      </div>
-
-      <div class="project">
-        <h3>Placement Tier Prediction</h3>
-        <br>
-        <p>
-          Developed ML-based model to predict student placement levels
-          and provide performance insights.
-        </p>
-      </div>
+    <div class="project">
+      <h3>Placement Tier Prediction</h3>
+      <br>
+      <p>
+        Built ML-based model to predict student placement levels
+        and provide academic insights.
+      </p>
     </div>
-  </section>
-  <section id="contact">
-    <h2 class="title">Contact Me</h2>
+  </div>
+</section>
 
-    <div class="contact-info">
-      <p>Email: yourmail@gmail.com</p>
-      <p>Phone: +91-XXXXXXXXXX</p>
-      <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
-      <p>GitHub: <a href="#">github.com/yourusername</a></p>
-    </div>
-  </section>
-  <footer>
-    <p>© 2026 Rajesh | All Rights Reserved</p>
-  </footer>
+<!-- Contact -->
+<section id="contact" class="hidden">
+  <h2 class="title">Contact Me</h2>
+
+  <div class="contact-info">
+    <p>📧 Email: yourmail@gmail.com</p>
+    <p>📱 Phone: +91-XXXXXXXXXX</p>
+    <p>💼 LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+    <p>💻 GitHub: <a href="#">github.com/yourusername</a></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 Rajesh | All Rights Reserved</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
